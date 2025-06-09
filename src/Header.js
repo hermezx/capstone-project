@@ -3,8 +3,8 @@ import Nav from './Nav';
 
 const Header = () => {
     return (
-        <header>
-            <img src="" alt="" />
+        <header className="header-container">
+            <img className="header-logo" src="" alt="" />
             <Nav />
         </header>
 
