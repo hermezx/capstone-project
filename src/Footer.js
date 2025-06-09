@@ -1,10 +1,11 @@
 import React from 'react';
+import footerImg from './assets/footer-pic.jpeg';
 
 const Footer = () => {
     return (
         <footer className="footer-container">
           <div>
-            <img src="" alt="" className="footer-image" />
+            <img src={footerImg} alt="restaurant picture" className="footer-image" />
           </div>
                     <div className="doormat-content footer-box">
             <h3 className="footer-title">Doormat Navigation</h3>

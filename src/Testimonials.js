@@ -1,17 +1,17 @@
 import React from "react";
 
-const Testimonials = () => {
+const Testimonials = ({rating, image, name, review}) => {
     return (
         <div className="test-container">
-            <p className="rating">☆☆☆☆☆</p>
+            <p className="rating">{rating}</p>
             <div className="test-mid-content">
-                <img src="" alt="" className="test-image" />
-                <p className="test-name">Jennie</p>
+                <img src={image} alt="" className="test-image" />
+                <p className="test-name">{name}</p>
             </div>
-            <p className="test-review">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi laudantium eaque ratione magni corporis iste minus odit.</p>
+            <p className="test-review">{review}</p>
         </div>
 
-    );
+    ); 
 }
 
 export default Testimonials;

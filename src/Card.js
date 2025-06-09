@@ -1,22 +1,23 @@
 import React from "react";
+import { MdDeliveryDining } from 'react-icons/md'
 
-const Card = () => {
+const Card = ({image, name, price, description}) => {
     return (
          <div className="card-container">
-            <img className="card-image" src="" alt="" />
+            <img className="card-image" src={image} alt="" />
             <div className="card-content">
                 <div className="card-top-content">
-                    <h3 className="card-name">Greek Salad</h3>
-                    <p className="card-price">$10.99</p>
+                    <h3 className="card-name">{name}</h3>
+                    <p className="card-price">{price}</p>
 
                 </div>
                 <div className="card-bottom-content">
                     <p className="card-description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores accusamus itaque minima est iste pariatur autem vero voluptates, quaerat explicabo distinctio nisi facere molestias eum quo neque, esse nihil repellendus.
+                        {description}
                     </p>
                     <div className="card-link">
                         <p>Order a delivery</p>
-                        <p>Icon</p>
+                        <MdDeliveryDining size={12} color="#555" title="Delivery available" />
                     </div>
                 </div>
 
