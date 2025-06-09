@@ -30,7 +30,11 @@ export const BookingPage = () => {
   return (
     <div className="booking-container">
       <div className="form-container">
-        <BookingForm availableTimes={availableTimes} dispatch={dispatch} submitForm={submitForm} />
+        <h1 className="form-intro">Book Your Reservation!</h1>
+        <p className="form-description">Please input your details below to proceed with your booking reservation</p>
+        <div>
+          <BookingForm availableTimes={availableTimes} dispatch={dispatch} submitForm={submitForm} />
+        </div>      
       </div>
     </div>
   );

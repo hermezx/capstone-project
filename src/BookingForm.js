@@ -28,18 +28,19 @@ const BookingForm = ( {availableTimes, dispatch, submitForm}) => {
 
     return (
         <form className="form-book" onSubmit={handleSubmit} style={{display: "grid", maxWidth: "200px", gap: "20px"}}>
-        <label htmlFor="res-date">Choose date</label>
+            
+        <label className="label" htmlFor="res-date">Choose date</label>
         <input type="date" id="res-date" onChange={handleDateChange} required/>
-        <label htmlFor="res-time">Choose time</label>
+        <label className="label" htmlFor="res-time">Choose time</label>
             <select id="res-time" onChange={(e) => setTime(e.target.value)} required>
                 {(availableTimes || []).map((t) => (
                     <option key={t} value={t}>{t}</option>
                 ))}
             </select>
-        <label htmlFor="guests">Number of guests</label>
+        <label className="label" htmlFor="guests">Number of guests</label>
         <input type="number" placeholder="1" min="1" max="10" id="guests" onChange={((e) => setGuests(parseInt(e.target.value)))} required/>
-        <label htmlFor="occasion">Occasion</label>
-        <select id="occasion" onChange={((e) => setOccasion(e.target.value))} required>
+        <label className="label" htmlFor="occasion">Occasion</label>
+        <select id="occasion" onChange={((e) => setOccasion(e.target.value))}>
             <option>Birthday</option>
             <option>Anniversary</option>
         </select>
